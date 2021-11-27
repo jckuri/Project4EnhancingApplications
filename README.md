@@ -116,4 +116,5 @@ Metrics or other evidence showing the RunBook executed and resolved the issue.
 
 # Former README.md
 
-[former_README.md](former_README.md)
+The former README.md contains general information about the project and how to
+install and to run the project: [former_README.md](former_README.md)
