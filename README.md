@@ -41,9 +41,11 @@ Create a horizontal pod autoscaler and cause load on the container.
 
 As evidence, provide screenshots showing:
 
-- The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
-- The Application Insights metrics which show the increase in the number of pods.
-- The email you received from the alert when the pod count increased.
+The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
+
+The Application Insights metrics which show the increase in the number of pods.
+
+The email you received from the alert when the pod count increased.
 
 ## Analyzing Performance Metrics
 
