@@ -68,6 +68,8 @@ exporter, tracer, flask middleware, logger
 
 References to each of these objects should be found in the def index() function.
 
+READ THE FILE: [azure-vote/main.py](azure-vote/main.py)
+
 ### View and display the collected data in Azure Application Insights & Azure Log Analytics.
 
 As evidence, provide screenshots of:
