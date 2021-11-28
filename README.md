@@ -49,11 +49,11 @@ Create a horizontal pod autoscaler and cause load on the container.
 
 As evidence, provide screenshots showing:
 
-The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
+1. The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
 
-The Application Insights metrics which show the increase in the number of pods.
+2. The Application Insights metrics which show the increase in the number of pods.
 
-The email you received from the alert when the pod count increased.
+3. The email you received from the alert when the pod count increased.
 
 ## Analyzing Performance Metrics
 
@@ -75,11 +75,11 @@ References to each of these objects should be found in the def index() function.
 
 As evidence, provide screenshots of:
 
-Application Insight Events that show the results of clicking vote for each Dogs & Cats
+1. Application Insight Events that show the results of clicking vote for each Dogs & Cats
 
 ![submission-screenshots/application-insights/event_statistics.png](submission-screenshots/application-insights/event_statistics.png)
 
-The output of the traces query in Azure Log Analytics
+2. The output of the traces query in Azure Log Analytics
 
 The query in the Kusto language <https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/sqlcheatsheet> selects logs with messages of "Dogs Vote" and "Cats Vote" that were logged 5 minutes ago:
 
@@ -91,7 +91,7 @@ traces
 
 ![submission-screenshots/application-insights/query_results.png](submission-screenshots/application-insights/query_results.png)
 
-The chart created from the output of the traces query
+3. The chart created from the output of the traces query
 
 ![submission-screenshots/application-insights/query_chart.png](submission-screenshots/application-insights/query_chart.png)
 
@@ -109,11 +109,11 @@ Trigger the VM Scale Set auto scale rule.
 
 As evidence, provide the following screenshots:
 
-The Activity log of the VM scale set that shows it scaled up, including a timestamp.
+1. The Activity log of the VM scale set that shows it scaled up, including a timestamp.
 
-The new instances being created.
+2. The new instances being created.
 
-The metrics showing the load increasing, then decreasing once scaled up, including a timestamp.
+3. The metrics showing the load increasing, then decreasing once scaled up, including a timestamp.
 
 ## Automate Resolution of Performance Issues
 
@@ -135,9 +135,9 @@ Trigger the Azure Alert. The RunBook should execute and resolve the issue.
 
 As evidence, provide the following screenshots:
 
-Email showing the alert was triggered
+1. Email showing the alert was triggered
 
-Metrics or other evidence showing the RunBook executed and resolved the issue.
+2. Metrics or other evidence showing the RunBook executed and resolved the issue.
 
 # Former README.md
 
