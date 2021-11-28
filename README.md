@@ -76,9 +76,15 @@ As evidence, provide screenshots of:
 
 Application Insight Events that show the results of clicking vote for each Dogs & Cats
 
+![submission-screenshots/application-insights/event_statistics.png](submission-screenshots/application-insights/event_statistics.png)
+
 The output of the traces query in Azure Log Analytics
 
+![submission-screenshots/application-insights/query_results.png](submission-screenshots/application-insights/query_results.png)
+
 The chart created from the output of the traces query
+
+![submission-screenshots/application-insights/query_chart.png](submission-screenshots/application-insights/query_chart.png)
 
 ## VM Autoscaling
 
