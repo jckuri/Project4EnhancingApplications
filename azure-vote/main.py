@@ -17,6 +17,7 @@ from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
 CONNECTION_STRING = 'InstrumentationKey=f6346e60-414e-40bc-a29d-3a682bfd9195;IngestionEndpoint=https://westus-0.in.applicationinsights.azure.com/'
+#CONNECTION_STRING = 'InstrumentationKey=f6346e60-414e-40bc-a29d-3a682bfd9195'
 
 # Logging
 # logger = # TODO: Setup logger
@@ -80,10 +81,10 @@ def index():
         # Get current values
         vote1 = r.get(button1).decode('utf-8')
         # TODO: use tracer object to trace cat vote
-        tracer.span(name = 'CatsVote')
+        tracer.span(name = 'Cats Vote')
         vote2 = r.get(button2).decode('utf-8')
         # TODO: use tracer object to trace dog vote
-        tracer.span(name = 'DogsVote')
+        tracer.span(name = 'Dogs Vote')
 
         # Return index with values
         return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title)
@@ -98,12 +99,12 @@ def index():
             vote1 = r.get(button1).decode('utf-8')
             properties = {'custom_dimensions': {'Cats Vote': vote1}}
             # TODO: use logger object to log cat vote
-            logger.info('CatsVote', extra = properties)
+            # logger.info('Cats Vote', extra = properties)
 
             vote2 = r.get(button2).decode('utf-8')
             properties = {'custom_dimensions': {'Dogs Vote': vote2}}
             # TODO: use logger object to log dog vote
-            logger.info('DogsVote', extra = properties)
+            # logger.info('Dogs Vote', extra = properties)
 
             return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title)
 
@@ -112,6 +113,12 @@ def index():
             # Insert vote result into DB
             vote = request.form['vote']
             r.incr(vote,1)
+            
+            # NEW TODO: log current vote
+            vote_value = r.get(vote).decode('utf-8')
+            vote_string = '{} Vote'.format(vote)
+            properties = {'custom_dimensions': {vote_string: vote_value}}
+            logger.info(vote_string, extra=properties)
 
             # Get current values
             vote1 = r.get(button1).decode('utf-8')

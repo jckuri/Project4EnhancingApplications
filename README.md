@@ -23,6 +23,8 @@ As evidence, provide a screenshot of the metrics from the VM Scale Set instance.
 
 There will be 7 graphs that display this data.
 
+![submission-screenshots/application-insights/vmss_insights.png](submission-screenshots/application-insights/vmss_insights.png)
+
 ### Enable Application Insights on an AKS cluster.
 	
 Enable Application Insights on the AKS cluster created from the provided script create-cluster.sh.
