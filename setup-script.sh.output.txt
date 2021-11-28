@@ -1,0 +1,563 @@
+$ sh setup-script.sh 
+STEP 0 - Creating resource group acdnd-c4-project...
+{
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project",
+  "location": "westus",
+  "managedBy": null,
+  "name": "acdnd-c4-project",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+Command ran in 2.216 seconds (init: 0.146, invoke: 2.070)
+Resource group created: acdnd-c4-project
+STEP 1 - Creating storage account udacitydiagjckuri
+{
+  "accessTier": "Hot",
+  "allowBlobPublicAccess": true,
+  "allowCrossTenantReplication": null,
+  "allowSharedKeyAccess": null,
+  "azureFilesIdentityBasedAuthentication": null,
+  "blobRestoreStatus": null,
+  "creationTime": "2021-11-28T04:25:28.723216+00:00",
+  "customDomain": null,
+  "defaultToOAuthAuthentication": null,
+  "enableHttpsTrafficOnly": true,
+  "enableNfsV3": null,
+  "encryption": {
+    "encryptionIdentity": null,
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "requireInfrastructureEncryption": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2021-11-28T04:25:28.832551+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2021-11-28T04:25:28.832551+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "extendedLocation": null,
+  "failoverInProgress": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Storage/storageAccounts/udacitydiagjckuri",
+  "identity": null,
+  "immutableStorageWithVersioning": null,
+  "isHnsEnabled": null,
+  "keyCreationTime": {
+    "key1": "2021-11-28T04:25:28.816915+00:00",
+    "key2": "2021-11-28T04:25:28.816915+00:00"
+  },
+  "keyPolicy": null,
+  "kind": "StorageV2",
+  "largeFileSharesState": null,
+  "lastGeoFailoverTime": null,
+  "location": "westus",
+  "minimumTlsVersion": "TLS1_0",
+  "name": "udacitydiagjckuri",
+  "networkRuleSet": {
+    "bypass": "AzureServices",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "resourceAccessRules": null,
+    "virtualNetworkRules": []
+  },
+  "primaryEndpoints": {
+    "blob": "https://udacitydiagjckuri.blob.core.windows.net/",
+    "dfs": "https://udacitydiagjckuri.dfs.core.windows.net/",
+    "file": "https://udacitydiagjckuri.file.core.windows.net/",
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://udacitydiagjckuri.queue.core.windows.net/",
+    "table": "https://udacitydiagjckuri.table.core.windows.net/",
+    "web": "https://udacitydiagjckuri.z22.web.core.windows.net/"
+  },
+  "primaryLocation": "westus",
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "acdnd-c4-project",
+  "routingPreference": null,
+  "sasPolicy": null,
+  "secondaryEndpoints": null,
+  "secondaryLocation": null,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": null,
+  "tags": {},
+  "type": "Microsoft.Storage/storageAccounts"
+}
+Storage account created: udacitydiagjckuri
+STEP 2 - Creating network security group udacity-vmss-nsg
+{
+  "NewNSG": {
+    "defaultSecurityRules": [
+      {
+        "access": "Allow",
+        "description": "Allow inbound traffic from all VMs in VNET",
+        "destinationAddressPrefix": "VirtualNetwork",
+        "destinationAddressPrefixes": [],
+        "destinationApplicationSecurityGroups": null,
+        "destinationPortRange": "*",
+        "destinationPortRanges": [],
+        "direction": "Inbound",
+        "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/defaultSecurityRules/AllowVnetInBound",
+        "name": "AllowVnetInBound",
+        "priority": 65000,
+        "protocol": "*",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "acdnd-c4-project",
+        "sourceAddressPrefix": "VirtualNetwork",
+        "sourceAddressPrefixes": [],
+        "sourceApplicationSecurityGroups": null,
+        "sourcePortRange": "*",
+        "sourcePortRanges": [],
+        "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+      },
+      {
+        "access": "Allow",
+        "description": "Allow inbound traffic from azure load balancer",
+        "destinationAddressPrefix": "*",
+        "destinationAddressPrefixes": [],
+        "destinationApplicationSecurityGroups": null,
+        "destinationPortRange": "*",
+        "destinationPortRanges": [],
+        "direction": "Inbound",
+        "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/defaultSecurityRules/AllowAzureLoadBalancerInBound",
+        "name": "AllowAzureLoadBalancerInBound",
+        "priority": 65001,
+        "protocol": "*",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "acdnd-c4-project",
+        "sourceAddressPrefix": "AzureLoadBalancer",
+        "sourceAddressPrefixes": [],
+        "sourceApplicationSecurityGroups": null,
+        "sourcePortRange": "*",
+        "sourcePortRanges": [],
+        "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+      },
+      {
+        "access": "Deny",
+        "description": "Deny all inbound traffic",
+        "destinationAddressPrefix": "*",
+        "destinationAddressPrefixes": [],
+        "destinationApplicationSecurityGroups": null,
+        "destinationPortRange": "*",
+        "destinationPortRanges": [],
+        "direction": "Inbound",
+        "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/defaultSecurityRules/DenyAllInBound",
+        "name": "DenyAllInBound",
+        "priority": 65500,
+        "protocol": "*",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "acdnd-c4-project",
+        "sourceAddressPrefix": "*",
+        "sourceAddressPrefixes": [],
+        "sourceApplicationSecurityGroups": null,
+        "sourcePortRange": "*",
+        "sourcePortRanges": [],
+        "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+      },
+      {
+        "access": "Allow",
+        "description": "Allow outbound traffic from all VMs to all VMs in VNET",
+        "destinationAddressPrefix": "VirtualNetwork",
+        "destinationAddressPrefixes": [],
+        "destinationApplicationSecurityGroups": null,
+        "destinationPortRange": "*",
+        "destinationPortRanges": [],
+        "direction": "Outbound",
+        "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/defaultSecurityRules/AllowVnetOutBound",
+        "name": "AllowVnetOutBound",
+        "priority": 65000,
+        "protocol": "*",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "acdnd-c4-project",
+        "sourceAddressPrefix": "VirtualNetwork",
+        "sourceAddressPrefixes": [],
+        "sourceApplicationSecurityGroups": null,
+        "sourcePortRange": "*",
+        "sourcePortRanges": [],
+        "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+      },
+      {
+        "access": "Allow",
+        "description": "Allow outbound traffic from all VMs to Internet",
+        "destinationAddressPrefix": "Internet",
+        "destinationAddressPrefixes": [],
+        "destinationApplicationSecurityGroups": null,
+        "destinationPortRange": "*",
+        "destinationPortRanges": [],
+        "direction": "Outbound",
+        "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/defaultSecurityRules/AllowInternetOutBound",
+        "name": "AllowInternetOutBound",
+        "priority": 65001,
+        "protocol": "*",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "acdnd-c4-project",
+        "sourceAddressPrefix": "*",
+        "sourceAddressPrefixes": [],
+        "sourceApplicationSecurityGroups": null,
+        "sourcePortRange": "*",
+        "sourcePortRanges": [],
+        "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+      },
+      {
+        "access": "Deny",
+        "description": "Deny all outbound traffic",
+        "destinationAddressPrefix": "*",
+        "destinationAddressPrefixes": [],
+        "destinationApplicationSecurityGroups": null,
+        "destinationPortRange": "*",
+        "destinationPortRanges": [],
+        "direction": "Outbound",
+        "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/defaultSecurityRules/DenyAllOutBound",
+        "name": "DenyAllOutBound",
+        "priority": 65500,
+        "protocol": "*",
+        "provisioningState": "Succeeded",
+        "resourceGroup": "acdnd-c4-project",
+        "sourceAddressPrefix": "*",
+        "sourceAddressPrefixes": [],
+        "sourceApplicationSecurityGroups": null,
+        "sourcePortRange": "*",
+        "sourcePortRanges": [],
+        "type": "Microsoft.Network/networkSecurityGroups/defaultSecurityRules"
+      }
+    ],
+    "etag": "W/\"df10d0bc-a9f1-49fb-83ac-05a46ed5f7e5\"",
+    "flowLogs": null,
+    "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg",
+    "location": "westus",
+    "name": "udacity-vmss-nsg",
+    "networkInterfaces": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "acdnd-c4-project",
+    "resourceGuid": "1fd140d7-98a4-42ea-87bf-10b26be307bb",
+    "securityRules": [],
+    "subnets": null,
+    "tags": null,
+    "type": "Microsoft.Network/networkSecurityGroups"
+  }
+}
+Command ran in 7.786 seconds (init: 0.137, invoke: 7.648)
+Network security group created: udacity-vmss-nsg
+STEP 3 - Creating VM scale set udacity-vmss
+Use existing SSH public key file: /home/jckuri/.ssh/id_rsa.pub
+{
+  "vmss": {
+    "doNotRunExtensionsOnOverprovisionedVMs": false,
+    "overprovision": true,
+    "provisioningState": "Succeeded",
+    "singlePlacementGroup": true,
+    "timeCreated": "2021-11-28T04:26:14.2498217+00:00",
+    "uniqueId": "46bde40b-307d-4ace-aafd-ab2caf2316df",
+    "upgradePolicy": {
+      "mode": "Automatic",
+      "rollingUpgradePolicy": {
+        "maxBatchInstancePercent": 20,
+        "maxUnhealthyInstancePercent": 20,
+        "maxUnhealthyUpgradedInstancePercent": 20,
+        "pauseTimeBetweenBatches": "PT0S"
+      }
+    },
+    "virtualMachineProfile": {
+      "networkProfile": {
+        "networkInterfaceConfigurations": [
+          {
+            "name": "udacie7e4Nic",
+            "properties": {
+              "dnsSettings": {
+                "dnsServers": []
+              },
+              "enableAcceleratedNetworking": false,
+              "enableIPForwarding": false,
+              "ipConfigurations": [
+                {
+                  "name": "udacie7e4IPConfig",
+                  "properties": {
+                    "loadBalancerBackendAddressPools": [
+                      {
+                        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/backendAddressPools/udacity-vmss-bepool",
+                        "resourceGroup": "acdnd-c4-project"
+                      }
+                    ],
+                    "loadBalancerInboundNatPools": [
+                      {
+                        "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/inboundNatPools/udacity-vmss-lbNatPool",
+                        "resourceGroup": "acdnd-c4-project"
+                      }
+                    ],
+                    "privateIPAddressVersion": "IPv4",
+                    "subnet": {
+                      "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/virtualNetworks/udacity-vmss-vnet/subnets/udacity-vmss-vnet-subnet",
+                      "resourceGroup": "acdnd-c4-project"
+                    }
+                  }
+                }
+              ],
+              "networkSecurityGroup": {
+                "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg",
+                "resourceGroup": "acdnd-c4-project"
+              },
+              "primary": true
+            }
+          }
+        ]
+      },
+      "osProfile": {
+        "adminUsername": "udacityadmin",
+        "allowExtensionOperations": true,
+        "computerNamePrefix": "udacie7e4",
+        "linuxConfiguration": {
+          "disablePasswordAuthentication": true,
+          "provisionVMAgent": true,
+          "ssh": {
+            "publicKeys": [
+              {
+                "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh9NMvwH7ZdTBcCJxSFDxICPR/XhiorFjBI+6T77yqJILpUnDKB2MNN7uDlorbdkKw5hWNIxpCmBbp18D847D596N4mA5AicusXZ5NZ4pdVJd17D7j734ojLQRJ4e7AfeQfCyz3IMHnKWZ8PmuzwMDyo7Y7le+/3COGp7BgbnIgLHVoi8pEeP+/GqXdhyIrZ9vKsieUoaQLX/Z2ihO5AlMByYUcawq3Y9CV9Tb1+WYBqqHZPaVUy4rLlcveZ4ue86nZgWCXJc2JTQ++4YB5b5WjV2rFFHY6Tv+CriTViPEosLI0wTNOnlaHs067J1Muo9sd52ivsgPTk5gpAsv1sDN",
+                "path": "/home/udacityadmin/.ssh/authorized_keys"
+              }
+            ]
+          }
+        },
+        "requireGuestProvisionSignal": true,
+        "secrets": []
+      },
+      "storageProfile": {
+        "imageReference": {
+          "offer": "UbuntuServer",
+          "publisher": "Canonical",
+          "sku": "18.04-LTS",
+          "version": "latest"
+        },
+        "osDisk": {
+          "caching": "ReadWrite",
+          "createOption": "FromImage",
+          "diskSizeGB": 30,
+          "managedDisk": {
+            "storageAccountType": "Standard_LRS"
+          },
+          "osType": "Linux"
+        }
+      }
+    }
+  }
+}
+Command ran in 69.405 seconds (init: 0.139, invoke: 69.267)
+VM scale set created: udacity-vmss
+STEP 4 - Associating NSG: udacity-vmss-nsg with subnet: udacity-vmss-vnet-subnet
+{
+  "addressPrefix": "10.0.0.0/24",
+  "addressPrefixes": null,
+  "applicationGatewayIpConfigurations": null,
+  "delegations": [],
+  "etag": "W/\"489f3b0c-70b1-41be-8f15-ef8e974e470c\"",
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/virtualNetworks/udacity-vmss-vnet/subnets/udacity-vmss-vnet-subnet",
+  "ipAllocations": null,
+  "ipConfigurationProfiles": null,
+  "ipConfigurations": [
+    {
+      "etag": null,
+      "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Compute/virtualMachineScaleSets/udacity-vmss/virtualMachines/0/networkInterfaces/udacie7e4Nic/ipConfigurations/udacie7e4IPConfig",
+      "name": null,
+      "privateIpAddress": null,
+      "privateIpAllocationMethod": null,
+      "provisioningState": null,
+      "publicIpAddress": null,
+      "resourceGroup": "acdnd-c4-project",
+      "subnet": null
+    },
+    {
+      "etag": null,
+      "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Compute/virtualMachineScaleSets/udacity-vmss/virtualMachines/1/networkInterfaces/udacie7e4Nic/ipConfigurations/udacie7e4IPConfig",
+      "name": null,
+      "privateIpAddress": null,
+      "privateIpAllocationMethod": null,
+      "provisioningState": null,
+      "publicIpAddress": null,
+      "resourceGroup": "acdnd-c4-project",
+      "subnet": null
+    },
+    {
+      "etag": null,
+      "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Compute/virtualMachineScaleSets/udacity-vmss/virtualMachines/2/networkInterfaces/udacie7e4Nic/ipConfigurations/udacie7e4IPConfig",
+      "name": null,
+      "privateIpAddress": null,
+      "privateIpAllocationMethod": null,
+      "provisioningState": null,
+      "publicIpAddress": null,
+      "resourceGroup": "acdnd-c4-project",
+      "subnet": null
+    },
+    {
+      "etag": null,
+      "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Compute/virtualMachineScaleSets/udacity-vmss/virtualMachines/3/networkInterfaces/udacie7e4Nic/ipConfigurations/udacie7e4IPConfig",
+      "name": null,
+      "privateIpAddress": null,
+      "privateIpAllocationMethod": null,
+      "provisioningState": null,
+      "publicIpAddress": null,
+      "resourceGroup": "acdnd-c4-project",
+      "subnet": null
+    }
+  ],
+  "name": "udacity-vmss-vnet-subnet",
+  "natGateway": null,
+  "networkSecurityGroup": {
+    "defaultSecurityRules": null,
+    "etag": null,
+    "flowLogs": null,
+    "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg",
+    "location": null,
+    "name": null,
+    "networkInterfaces": null,
+    "provisioningState": null,
+    "resourceGroup": "acdnd-c4-project",
+    "resourceGuid": null,
+    "securityRules": null,
+    "subnets": null,
+    "tags": null,
+    "type": null
+  },
+  "privateEndpointNetworkPolicies": "Enabled",
+  "privateEndpoints": null,
+  "privateLinkServiceNetworkPolicies": "Enabled",
+  "provisioningState": "Succeeded",
+  "purpose": null,
+  "resourceGroup": "acdnd-c4-project",
+  "resourceNavigationLinks": null,
+  "routeTable": null,
+  "serviceAssociationLinks": null,
+  "serviceEndpointPolicies": null,
+  "serviceEndpoints": null,
+  "type": "Microsoft.Network/virtualNetworks/subnets"
+}
+Command ran in 5.729 seconds (init: 0.140, invoke: 5.590)
+NSG: udacity-vmss-nsg associated with subnet: udacity-vmss-vnet-subnet
+STEP 5 - Creating health probe tcpProbe
+{
+  "etag": "W/\"2e10a8ae-5746-4566-94f8-ad320e1a2c26\"",
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/probes/tcpProbe",
+  "intervalInSeconds": 5,
+  "loadBalancingRules": null,
+  "name": "tcpProbe",
+  "numberOfProbes": 2,
+  "port": 80,
+  "protocol": "Tcp",
+  "provisioningState": "Succeeded",
+  "requestPath": null,
+  "resourceGroup": "acdnd-c4-project",
+  "type": "Microsoft.Network/loadBalancers/probes"
+}
+Command ran in 44.054 seconds (init: 0.138, invoke: 43.917)
+Health probe created: tcpProbe
+STEP 6 - Creating network load balancer rule udacity-vmss-lb-network-rule
+{
+  "backendAddressPool": {
+    "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/backendAddressPools/udacity-vmss-bepool",
+    "resourceGroup": "acdnd-c4-project"
+  },
+  "backendAddressPools": [
+    {
+      "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/backendAddressPools/udacity-vmss-bepool",
+      "resourceGroup": "acdnd-c4-project"
+    }
+  ],
+  "backendPort": 80,
+  "disableOutboundSnat": null,
+  "enableFloatingIp": false,
+  "enableTcpReset": false,
+  "etag": "W/\"0aa72912-7257-458e-9efe-e82e6e8b12c5\"",
+  "frontendIpConfiguration": {
+    "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/frontendIPConfigurations/loadBalancerFrontEnd",
+    "resourceGroup": "acdnd-c4-project"
+  },
+  "frontendPort": 80,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/loadBalancingRules/udacity-vmss-lb-network-rule",
+  "idleTimeoutInMinutes": 4,
+  "loadDistribution": "Default",
+  "name": "udacity-vmss-lb-network-rule",
+  "probe": {
+    "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/loadBalancers/udacity-vmss-lb/probes/tcpProbe",
+    "resourceGroup": "acdnd-c4-project"
+  },
+  "protocol": "Tcp",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "acdnd-c4-project",
+  "type": "Microsoft.Network/loadBalancers/loadBalancingRules"
+}
+Command ran in 13.263 seconds (init: 0.139, invoke: 13.123)
+Network load balancer rule created: udacity-vmss-lb-network-rule
+STEP 7 - Adding port 80 to NSG udacity-vmss-nsg
+{
+  "access": "Allow",
+  "description": null,
+  "destinationAddressPrefix": "*",
+  "destinationAddressPrefixes": [],
+  "destinationApplicationSecurityGroups": null,
+  "destinationPortRange": "80",
+  "destinationPortRanges": [],
+  "direction": "Inbound",
+  "etag": "W/\"e0ba4607-9c16-4d9d-882f-fb113d1cfccc\"",
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/securityRules/Port_80",
+  "name": "Port_80",
+  "priority": 100,
+  "protocol": "*",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "acdnd-c4-project",
+  "sourceAddressPrefix": "*",
+  "sourceAddressPrefixes": [],
+  "sourceApplicationSecurityGroups": null,
+  "sourcePortRange": "*",
+  "sourcePortRanges": [],
+  "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+}
+Command ran in 12.238 seconds (init: 0.136, invoke: 12.102)
+Port 80 added to NSG: udacity-vmss-nsg
+STEP 8 - Adding port 22 to NSG udacity-vmss-nsg
+{
+  "access": "Allow",
+  "description": null,
+  "destinationAddressPrefix": "*",
+  "destinationAddressPrefixes": [],
+  "destinationApplicationSecurityGroups": null,
+  "destinationPortRange": "22",
+  "destinationPortRanges": [],
+  "direction": "Inbound",
+  "etag": "W/\"a1676b1d-d770-4846-9446-a69d9c512867\"",
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/acdnd-c4-project/providers/Microsoft.Network/networkSecurityGroups/udacity-vmss-nsg/securityRules/Port_22",
+  "name": "Port_22",
+  "priority": 110,
+  "protocol": "*",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "acdnd-c4-project",
+  "sourceAddressPrefix": "*",
+  "sourceAddressPrefixes": [],
+  "sourceApplicationSecurityGroups": null,
+  "sourcePortRange": "*",
+  "sourcePortRanges": [],
+  "type": "Microsoft.Network/networkSecurityGroups/securityRules"
+}
+Command ran in 11.981 seconds (init: 0.140, invoke: 11.841)
+Port 22 added to NSG: udacity-vmss-nsg
+VMSS script completed!
+
