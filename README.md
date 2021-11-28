@@ -81,6 +81,14 @@ Application Insight Events that show the results of clicking vote for each Dogs 
 
 The output of the traces query in Azure Log Analytics
 
+The query in the Kusto language <https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/sqlcheatsheet> selects logs with messages of "Dogs Vote" and "Cats Vote" that were logged 5 minutes ago:
+
+```
+traces
+| where message == 'Dogs Vote' or message == 'Cats Vote'
+| where timestamp > ago(5m)
+```
+
 ![submission-screenshots/application-insights/query_results.png](submission-screenshots/application-insights/query_results.png)
 
 The chart created from the output of the traces query
