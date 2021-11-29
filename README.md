@@ -313,7 +313,7 @@ And I stress the virtual machine 2, using its CPU at 100%:
 
 ![submission-screenshots/runbook/vm2.png](submission-screenshots/runbook/vm2.png)
 
-Both virtual machines get fully busy in the resource `udacity-vmss`:
+Both virtual machines get fully busy for 420 seconds (7 minutes) in the resource `udacity-vmss`:
 
 ![submission-screenshots/runbook/cpu_utilization.png](submission-screenshots/runbook/cpu_utilization.png)
 
