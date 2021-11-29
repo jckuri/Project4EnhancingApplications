@@ -186,6 +186,9 @@ This rule is applied regardless of the day and the hour.
 
 ![submission-screenshots/autoscaling-vmss/autoscale_condition.png](submission-screenshots/autoscaling-vmss/autoscale_condition.png)
 
+After using autoscaling, we should turn autoscaling off by selecting manual scaling.
+Otherwise, you will have problems with the Runbook `ScaleOutVMSS2` later.
+
 ### Cause the VM Scale Set to auto scale.
 
 Trigger the VM Scale Set auto scale rule.
