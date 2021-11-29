@@ -117,6 +117,8 @@ The average of Active Pod Count is now 15, enough to activate the alert rule:
 
 3. The email you received from the alert when the pod count increased.
 
+I received this e-mail as a result that the alert was triggered:
+
 ![submission-screenshots/kubernetes-cluster/alert_rule_email.png](submission-screenshots/kubernetes-cluster/alert_rule_email.png)
 
 ## Analyzing Performance Metrics
