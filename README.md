@@ -171,6 +171,8 @@ Azure Automation Account and RunBook resources are created.
 
 As evidence, provide a screenshot of your resource group containing your running resources.
 
+![submission-screenshots/application-insights/resource_group_with_resources.png](submission-screenshots/application-insights/resource_group_with_resources.png)
+
 ScaleOutVMSS2 Runbook
 
 ```
@@ -193,22 +195,17 @@ Get-AzVmssVM -ResourceGroupName $resource_group -VMScaleSetName $vmss_name
 Write-Output "End of Runbook.";
 ```
 
-![submission-screenshots/runbook/alert_details.png](submission-screenshots/runbook/alert_details.png)
-![submission-screenshots/runbook/alert_rule.png](submission-screenshots/runbook/alert_rule.png)
-![submission-screenshots/runbook/cpu_utilization.png](submission-screenshots/runbook/cpu_utilization.png)
-![submission-screenshots/runbook/creating_new_instances.png](submission-screenshots/runbook/creating_new_instances.png)
-![submission-screenshots/runbook/initial_instances.png](submission-screenshots/runbook/initial_instances.png)
-![submission-screenshots/runbook/instances_created.png](submission-screenshots/runbook/instances_created.png)
 ![submission-screenshots/runbook/run_as_accounts.png](submission-screenshots/runbook/run_as_accounts.png)
-![submission-screenshots/runbook/runbook_completed.png](submission-screenshots/runbook/runbook_completed.png)
-![submission-screenshots/runbook/vm0.png](submission-screenshots/runbook/vm0.png)
-![submission-screenshots/runbook/vm2.png](submission-screenshots/runbook/vm2.png)
 
 ### Configure an Azure Alert to trigger the RunBook to execute.
 	
 Configure an Azure Alert in Azure Monitor to trigger the RunBook.
 
 As evidence, provide a screenshot of the configuration.
+
+![submission-screenshots/runbook/alert_rule.png](submission-screenshots/runbook/alert_rule.png)
+
+![submission-screenshots/runbook/alert_details.png](submission-screenshots/runbook/alert_details.png)
 
 ### Cause the RunBook to be automatically triggered and resolve a problem.
 
@@ -221,6 +218,20 @@ As evidence, provide the following screenshots:
 ![submission-screenshots/runbook/alert_email.png](submission-screenshots/runbook/alert_email.png)
 
 2. Metrics or other evidence showing the RunBook executed and resolved the issue.
+
+![submission-screenshots/runbook/initial_instances.png](submission-screenshots/runbook/initial_instances.png)
+
+![submission-screenshots/runbook/vm0.png](submission-screenshots/runbook/vm0.png)
+
+![submission-screenshots/runbook/vm2.png](submission-screenshots/runbook/vm2.png)
+
+![submission-screenshots/runbook/cpu_utilization.png](submission-screenshots/runbook/cpu_utilization.png)
+
+![submission-screenshots/runbook/creating_new_instances.png](submission-screenshots/runbook/creating_new_instances.png)
+
+![submission-screenshots/runbook/runbook_completed.png](submission-screenshots/runbook/runbook_completed.png)
+
+![submission-screenshots/runbook/instances_created.png](submission-screenshots/runbook/instances_created.png)
 
 # Former README.md
 
