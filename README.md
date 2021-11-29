@@ -55,7 +55,11 @@ Create an Azure Alert in Azure Monitor. This alert should trigger when the numbe
 
 As evidence, provide a screenshot of the Azure Alert and email sent when the alert is triggered.
 
+The details of the alert rule with the moments in which the rule was activated:
+
 ![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
+
+The e-mail I received when the alert was triggered:
 
 ![submission-screenshots/kubernetes-cluster/alert_rule_email.png](submission-screenshots/kubernetes-cluster/alert_rule_email.png)
 
