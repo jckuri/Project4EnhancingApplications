@@ -143,6 +143,10 @@ As evidence, provide screenshots of:
 
 1. Application Insight Events that show the results of clicking vote for each Dogs & Cats
 
+The event statistics shows the counts of all the requests, the POST requests, the GET requests, the `Dogs Vote`, and the `Cats Vote`.
+The event statistics also shows another log messages that I wrongfully programmed and I couldn't delete after. 
+Don't pay attention to them. I filtered them out in the Kusto query.
+
 ![submission-screenshots/application-insights/event_statistics.png](submission-screenshots/application-insights/event_statistics.png)
 
 2. The output of the traces query in Azure Log Analytics
