@@ -229,6 +229,8 @@ Azure Automation Account and RunBook resources are created.
 
 As evidence, provide a screenshot of your resource group containing your running resources.
 
+The resource group `acdnd-c4-project` contains the Automation Account `automationaccountjckuri` and the Runbook `ScaleOutVMSS2`:
+
 ![submission-screenshots/application-insights/resource_group_with_resources.png](submission-screenshots/application-insights/resource_group_with_resources.png)
 
 ![submission-screenshots/runbook/runbook_code.png](submission-screenshots/runbook/runbook_code.png)
