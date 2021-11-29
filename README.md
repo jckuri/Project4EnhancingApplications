@@ -173,6 +173,8 @@ As evidence, provide a screenshot of your resource group containing your running
 
 ![submission-screenshots/application-insights/resource_group_with_resources.png](submission-screenshots/application-insights/resource_group_with_resources.png)
 
+![submission-screenshots/runbook/runbook_code.png](submission-screenshots/runbook/runbook_code.png)
+
 ScaleOutVMSS2 Runbook
 
 ```
