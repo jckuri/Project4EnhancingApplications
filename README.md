@@ -85,6 +85,8 @@ azure-vote-front   LoadBalancer   10.0.22.238   40.85.149.193   80:32630/TCP   2
 kubernetes         ClusterIP      10.0.0.1      <none>          443/TCP        26h
 ```
 
+The AKS cluster is running the Vote Web App in the address: [40.85.149.193](40.85.149.193)
+
 I execute this command to run the `load-generator`:
 
 ```
