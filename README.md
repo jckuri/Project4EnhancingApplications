@@ -37,6 +37,12 @@ Enable Application Insights on the AKS cluster created from the provided script 
 
 As evidence, provide a screenshot showing Application Insights is enabled on the AKS cluster.
 
+![submission-screenshots/kubernetes-cluster/aks_cluster_insights.png](submission-screenshots/kubernetes-cluster/aks_cluster_insights.png)
+![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
+![submission-screenshots/kubernetes-cluster/alert_rule_email.png](submission-screenshots/kubernetes-cluster/alert_rule_email.png)
+![submission-screenshots/kubernetes-cluster/initial_instances.png](submission-screenshots/kubernetes-cluster/initial_instances.png)
+![submission-screenshots/kubernetes-cluster/new_instances.png](submission-screenshots/kubernetes-cluster/new_instances.png)
+
 ### Create an Azure Alert.
 
 Create an Azure Alert in Azure Monitor. This alert should trigger when the number of pods increases beyond a certain threshold.
