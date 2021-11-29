@@ -77,6 +77,8 @@ while true; do wget -q -O- 40.85.149.193; done
 
 ![submission-screenshots/kubernetes-cluster/synthetic_load.png](submission-screenshots/kubernetes-cluster/synthetic_load.png)
 
+![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
+
 ![submission-screenshots/kubernetes-cluster/new_instances.png](submission-screenshots/kubernetes-cluster/new_instances.png)
 
 2. The Application Insights metrics which show the increase in the number of pods.
