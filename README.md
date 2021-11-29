@@ -217,6 +217,8 @@ As a result, 2 new instances are created:
 
 3. The metrics showing the load increasing, then decreasing once scaled up, including a timestamp.
 
+CPU usage increased for 420 seconds (7 minutes) and then decreased:
+
 ![submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png](submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png)
 
 ## Automate Resolution of Performance Issues
