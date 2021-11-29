@@ -301,11 +301,15 @@ I received this e-mail because the alert rule `ScaleOutVMSS` was triggered for t
 
 2. Metrics or other evidence showing the RunBook executed and resolved the issue.
 
-
+At the beginning, I had 2 instances running in my VMSS:
 
 ![submission-screenshots/runbook/initial_instances.png](submission-screenshots/runbook/initial_instances.png)
 
+Then I stress the virtual machine 0, using its CPU at 100%:
+
 ![submission-screenshots/runbook/vm0.png](submission-screenshots/runbook/vm0.png)
+
+And I stress the virtual machine 2, using its CPU at 100%:
 
 ![submission-screenshots/runbook/vm2.png](submission-screenshots/runbook/vm2.png)
 
