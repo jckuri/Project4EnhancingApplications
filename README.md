@@ -279,7 +279,11 @@ Configure an Azure Alert in Azure Monitor to trigger the RunBook.
 
 As evidence, provide a screenshot of the configuration.
 
+My alert rule triggers when the average percentage of CPU usage is greater than 50%.
+
 ![submission-screenshots/runbook/alert_rule.png](submission-screenshots/runbook/alert_rule.png)
+
+And here the alert rule is triggered:
 
 ![submission-screenshots/runbook/alert_details.png](submission-screenshots/runbook/alert_details.png)
 
