@@ -45,6 +45,8 @@ Enable Application Insights on the AKS cluster created from the provided script 
 
 As evidence, provide a screenshot showing Application Insights is enabled on the AKS cluster.
 
+The Application Insights is enabled on the AKS cluster:
+
 ![submission-screenshots/kubernetes-cluster/aks_cluster_insights.png](submission-screenshots/kubernetes-cluster/aks_cluster_insights.png)
 
 ### Create an Azure Alert.
