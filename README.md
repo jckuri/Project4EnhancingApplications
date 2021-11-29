@@ -313,11 +313,20 @@ And I stress the virtual machine 2, using its CPU at 100%:
 
 ![submission-screenshots/runbook/vm2.png](submission-screenshots/runbook/vm2.png)
 
+Both virtual machines get fully busy in the resource `udacity-vmss`:
+
 ![submission-screenshots/runbook/cpu_utilization.png](submission-screenshots/runbook/cpu_utilization.png)
+
+As a result, the alert rule `ScaleOutVMSS` was triggered and the Runbook `ScaleOutVMSS2` was executed,
+which creates new instances:
 
 ![submission-screenshots/runbook/creating_new_instances.png](submission-screenshots/runbook/creating_new_instances.png)
 
+Here is the output of the Runbook `ScaleOutVMSS2` when its execution is completed:
+
 ![submission-screenshots/runbook/runbook_completed.png](submission-screenshots/runbook/runbook_completed.png)
+
+Finally, the number of instances is now 5. The problem of CPU overloaded was remedied:
 
 ![submission-screenshots/runbook/instances_created.png](submission-screenshots/runbook/instances_created.png)
 
