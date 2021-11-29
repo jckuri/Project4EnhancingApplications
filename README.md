@@ -38,8 +38,6 @@ Enable Application Insights on the AKS cluster created from the provided script 
 As evidence, provide a screenshot showing Application Insights is enabled on the AKS cluster.
 
 ![submission-screenshots/kubernetes-cluster/aks_cluster_insights.png](submission-screenshots/kubernetes-cluster/aks_cluster_insights.png)
-![submission-screenshots/kubernetes-cluster/initial_instances.png](submission-screenshots/kubernetes-cluster/initial_instances.png)
-![submission-screenshots/kubernetes-cluster/new_instances.png](submission-screenshots/kubernetes-cluster/new_instances.png)
 
 ### Create an Azure Alert.
 
@@ -57,7 +55,13 @@ As evidence, provide screenshots showing:
 
 1. The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
 
+![submission-screenshots/kubernetes-cluster/initial_instances.png](submission-screenshots/kubernetes-cluster/initial_instances.png)
+
+![submission-screenshots/kubernetes-cluster/new_instances.png](submission-screenshots/kubernetes-cluster/new_instances.png)
+
 2. The Application Insights metrics which show the increase in the number of pods.
+
+![submission-screenshots/kubernetes-cluster/aks_cluster_insights.png](submission-screenshots/kubernetes-cluster/aks_cluster_insights.png)
 
 3. The email you received from the alert when the pod count increased.
 
