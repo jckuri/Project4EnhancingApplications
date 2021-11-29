@@ -180,6 +180,9 @@ Create an auto-scaling rule for a VMSS.
 
 As evidence, provide a screenshot showing the conditions set for the auto scaling rule. This can be found in the Scaling item in the VM Scale Set.
 
+My autoscale rule increases the number of instances by 1 if the average percentage of CPU usage is greater than 50%. 
+This rule is applied regardless of the day and the hour.
+
 ![submission-screenshots/autoscaling-vmss/autoscale_condition.png](submission-screenshots/autoscaling-vmss/autoscale_condition.png)
 
 ### Cause the VM Scale Set to auto scale.
