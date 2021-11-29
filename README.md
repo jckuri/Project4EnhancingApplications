@@ -193,15 +193,25 @@ As evidence, provide the following screenshots:
 
 1. The Activity log of the VM scale set that shows it scaled up, including a timestamp.
 
+The autoscale scale up was completed:
+
 ![submission-screenshots/autoscaling-vmss/scale_up_completed.png](submission-screenshots/autoscaling-vmss/scale_up_completed.png)
 
 2. The new instances being created.
 
+There are only 2 instances at the beginning:
+
 ![submission-screenshots/autoscaling-vmss/initial_instances.png](submission-screenshots/autoscaling-vmss/initial_instances.png)
+
+I stress the virtual machine 0 to 100% CPU usage:
 
 ![submission-screenshots/autoscaling-vmss/vm0.png](submission-screenshots/autoscaling-vmss/vm0.png)
 
+I stress the virtual machine 2 to 100% CPU usage:
+
 ![submission-screenshots/autoscaling-vmss/vm2.png](submission-screenshots/autoscaling-vmss/vm2.png)
+
+As a result, 2 new instances are created:
 
 ![submission-screenshots/autoscaling-vmss/creating_instances.png](submission-screenshots/autoscaling-vmss/creating_instances.png)
 
