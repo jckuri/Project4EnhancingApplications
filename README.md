@@ -218,6 +218,8 @@ As evidence, provide the following screenshots:
 
 1. Email showing the alert was triggered
 
+![submission-screenshots/runbook/alert_email.png](submission-screenshots/runbook/alert_email.png)
+
 2. Metrics or other evidence showing the RunBook executed and resolved the issue.
 
 # Former README.md
