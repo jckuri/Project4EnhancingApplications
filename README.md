@@ -103,6 +103,14 @@ Create an auto-scaling rule for a VMSS.
 
 As evidence, provide a screenshot showing the conditions set for the auto scaling rule. This can be found in the Scaling item in the VM Scale Set.
 
+![submission-screenshots/autoscaling-vmss/autoscale_condition.png](submission-screenshots/autoscaling-vmss/autoscale_condition.png)
+![submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png](submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png)
+![submission-screenshots/autoscaling-vmss/creating_instances.png](submission-screenshots/autoscaling-vmss/creating_instances.png)
+![submission-screenshots/autoscaling-vmss/initial_instances.png](submission-screenshots/autoscaling-vmss/initial_instances.png)
+![submission-screenshots/autoscaling-vmss/scale_up_completed.png](submission-screenshots/autoscaling-vmss/scale_up_completed.png)
+![submission-screenshots/autoscaling-vmss/vm0.png](submission-screenshots/autoscaling-vmss/vm0.png)
+![submission-screenshots/autoscaling-vmss/vm2.png](submission-screenshots/autoscaling-vmss/vm2.png)
+
 ### Cause the VM Scale Set to auto scale.
 
 Trigger the VM Scale Set auto scale rule.
