@@ -111,6 +111,8 @@ As a result, new pods are created. Notice that now there are 3 `azure-vote-front
 
 2. The Application Insights metrics which show the increase in the number of pods.
 
+The average of Active Pod Count is now 15, enough to activate the alert rule:
+
 ![submission-screenshots/kubernetes-cluster/aks_cluster_insights.png](submission-screenshots/kubernetes-cluster/aks_cluster_insights.png)
 
 3. The email you received from the alert when the pod count increased.
