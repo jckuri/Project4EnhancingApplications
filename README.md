@@ -233,9 +233,9 @@ The resource group `acdnd-c4-project` contains the Automation Account `automatio
 
 ![submission-screenshots/application-insights/resource_group_with_resources.png](submission-screenshots/application-insights/resource_group_with_resources.png)
 
-![submission-screenshots/runbook/runbook_code.png](submission-screenshots/runbook/runbook_code.png)
+Here is the source code I programmed for my Runbook `ScaleOutVMSS2`:
 
-ScaleOutVMSS2 Runbook
+![submission-screenshots/runbook/runbook_code.png](submission-screenshots/runbook/runbook_code.png)
 
 ```
 Write-Output "Start of Runbook.";
@@ -256,6 +256,20 @@ Get-AzVmssVM -ResourceGroupName $resource_group -VMScaleSetName $vmss_name
 
 Write-Output "End of Runbook.";
 ```
+
+When I programmed my Runbook `ScaleOutVMSS2`, I got inspiration in these tutorials:
+
+Change the capacity of a scale set
+https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-manage-powershell#change-the-capacity-of-a-scale-set
+
+Azure Automation: Managing Runbook Authentication and Modules
+https://cloudskills.io/blog/azure-automation-runbook-2
+
+Create an Azure Automation Account
+https://cloudskills.io/blog/azure-automation-runbook#create-an-azure-automation-account
+
+The last tutorial explains a crucial step. We cannot have access to Azure resources without authenticating properly.
+You should enable the option `Create Azure Run As account` in order to simplify this process:
 
 ![submission-screenshots/runbook/run_as_accounts.png](submission-screenshots/runbook/run_as_accounts.png)
 
