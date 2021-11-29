@@ -138,12 +138,6 @@ Create an auto-scaling rule for a VMSS.
 As evidence, provide a screenshot showing the conditions set for the auto scaling rule. This can be found in the Scaling item in the VM Scale Set.
 
 ![submission-screenshots/autoscaling-vmss/autoscale_condition.png](submission-screenshots/autoscaling-vmss/autoscale_condition.png)
-![submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png](submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png)
-![submission-screenshots/autoscaling-vmss/creating_instances.png](submission-screenshots/autoscaling-vmss/creating_instances.png)
-![submission-screenshots/autoscaling-vmss/initial_instances.png](submission-screenshots/autoscaling-vmss/initial_instances.png)
-![submission-screenshots/autoscaling-vmss/scale_up_completed.png](submission-screenshots/autoscaling-vmss/scale_up_completed.png)
-![submission-screenshots/autoscaling-vmss/vm0.png](submission-screenshots/autoscaling-vmss/vm0.png)
-![submission-screenshots/autoscaling-vmss/vm2.png](submission-screenshots/autoscaling-vmss/vm2.png)
 
 ### Cause the VM Scale Set to auto scale.
 
@@ -153,9 +147,21 @@ As evidence, provide the following screenshots:
 
 1. The Activity log of the VM scale set that shows it scaled up, including a timestamp.
 
+![submission-screenshots/autoscaling-vmss/scale_up_completed.png](submission-screenshots/autoscaling-vmss/scale_up_completed.png)
+
 2. The new instances being created.
 
+![submission-screenshots/autoscaling-vmss/initial_instances.png](submission-screenshots/autoscaling-vmss/initial_instances.png)
+
+![submission-screenshots/autoscaling-vmss/vm0.png](submission-screenshots/autoscaling-vmss/vm0.png)
+
+![submission-screenshots/autoscaling-vmss/vm2.png](submission-screenshots/autoscaling-vmss/vm2.png)
+
+![submission-screenshots/autoscaling-vmss/creating_instances.png](submission-screenshots/autoscaling-vmss/creating_instances.png)
+
 3. The metrics showing the load increasing, then decreasing once scaled up, including a timestamp.
+
+![submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png](submission-screenshots/autoscaling-vmss/cpu_utilization_vm0.png)
 
 ## Automate Resolution of Performance Issues
 
