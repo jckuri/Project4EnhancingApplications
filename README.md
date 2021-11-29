@@ -10,7 +10,11 @@ Azure Log Analytics Workspace and Azure Application Insights resources are creat
 
 As evidence, provide a screenshot of the resource group containing your running resources.
 
+The resource group `acdnd-c4-project` containing the running resources:
+
 ![submission-screenshots/application-insights/resource_group_with_resources.png](submission-screenshots/application-insights/resource_group_with_resources.png)
+
+And all the resources I created for this project:
 
 ![submission-screenshots/application-insights/all_resources.png](submission-screenshots/application-insights/all_resources.png)
 
