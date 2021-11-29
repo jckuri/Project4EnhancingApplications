@@ -71,7 +71,11 @@ As evidence, provide screenshots showing:
 
 1. The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
 
+These are the initial pods. Notice there is only one `azure-vote-front` pod:
+
 ![submission-screenshots/kubernetes-cluster/initial_instances.png](submission-screenshots/kubernetes-cluster/initial_instances.png)
+
+Then I execute this command to know the external IP of the LoadBalancer:
 
 ```
 $ kubectl get service
@@ -81,15 +85,23 @@ azure-vote-front   LoadBalancer   10.0.22.238   40.85.149.193   80:32630/TCP   2
 kubernetes         ClusterIP      10.0.0.1      <none>          443/TCP        26h
 ```
 
+I execute this command to run the `load-generator`:
+
 ```
 kubectl run -it --rm load-generator --image=busybox /bin/sh
 ```
+
+Once inside the `load-generator`, I execute this infinite while loop to overload the LoadBalancer:
 
 ```
 while true; do wget -q -O- 40.85.149.193; done
 ```
 
+As a result, an infinite number of requests are asked to the LoadBalancer:
+
 ![submission-screenshots/kubernetes-cluster/synthetic_load.png](submission-screenshots/kubernetes-cluster/synthetic_load.png)
+
+
 
 ![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
 
