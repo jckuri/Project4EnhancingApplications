@@ -165,6 +165,11 @@ traces
 
 3. The chart created from the output of the traces query
 
+Here is the doughnut graph of the cats votes and the dogs votes.
+Notice that the doughnut is asymmetric, not 50%-50%.
+Why? Because the instructions in the TODOs of the [azure-vote/main.py](azure-vote/main.py) file are ill-formed.
+Read the lines below `# NEW TODO: log current vote` in my [azure-vote/main.py](azure-vote/main.py) file in order to know how I fixed this bug.
+
 ![submission-screenshots/application-insights/query_chart.png](submission-screenshots/application-insights/query_chart.png)
 
 ## VM Autoscaling
