@@ -259,13 +259,13 @@ Write-Output "End of Runbook.";
 
 When I programmed my Runbook `ScaleOutVMSS2`, I got inspiration in these tutorials:
 
-Change the capacity of a scale set
+Change the capacity of a scale set<br/>
 https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-manage-powershell#change-the-capacity-of-a-scale-set
 
-Azure Automation: Managing Runbook Authentication and Modules
+Azure Automation: Managing Runbook Authentication and Modules<br/>
 https://cloudskills.io/blog/azure-automation-runbook-2
 
-Create an Azure Automation Account
+Create an Azure Automation Account<br/>
 https://cloudskills.io/blog/azure-automation-runbook#create-an-azure-automation-account
 
 The last tutorial explains a crucial step. We cannot have access to Azure resources without authenticating properly.
