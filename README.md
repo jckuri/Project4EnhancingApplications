@@ -47,6 +47,8 @@ As evidence, provide a screenshot of the Azure Alert and email sent when the ale
 
 ![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
 
+![submission-screenshots/kubernetes-cluster/alert_rule_email.png](submission-screenshots/kubernetes-cluster/alert_rule_email.png)
+
 ### Create a horizontal pod auto scaler and cause load on the container.
 
 Create a horizontal pod autoscaler and cause load on the container.
@@ -56,6 +58,14 @@ As evidence, provide screenshots showing:
 1. The output of the Horizontal Pod Autoscaler, showing an increase in the number of pods.
 
 ![submission-screenshots/kubernetes-cluster/initial_instances.png](submission-screenshots/kubernetes-cluster/initial_instances.png)
+
+```
+$ kubectl get service
+NAME               TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)        AGE
+azure-vote-back    ClusterIP      10.0.36.67    <none>          6379/TCP       25h
+azure-vote-front   LoadBalancer   10.0.22.238   40.85.149.193   80:32630/TCP   25h
+kubernetes         ClusterIP      10.0.0.1      <none>          443/TCP        26h
+```
 
 ```
 kubectl run -it --rm load-generator --image=busybox /bin/sh
