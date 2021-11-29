@@ -101,9 +101,11 @@ As a result, an infinite number of requests are asked to the LoadBalancer:
 
 ![submission-screenshots/kubernetes-cluster/synthetic_load.png](submission-screenshots/kubernetes-cluster/synthetic_load.png)
 
-
+The AKS cluster is overloaded. And the alert is triggered:
 
 ![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
+
+As a result, new pods are created. Notice that now there are 3 `azure-vote-front` pods:
 
 ![submission-screenshots/kubernetes-cluster/new_instances.png](submission-screenshots/kubernetes-cluster/new_instances.png)
 
