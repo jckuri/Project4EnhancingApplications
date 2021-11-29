@@ -123,6 +123,39 @@ Azure Automation Account and RunBook resources are created.
 
 As evidence, provide a screenshot of your resource group containing your running resources.
 
+ScaleOutVMSS2 Runbook
+
+```
+Write-Output "Start of Runbook.";
+
+$connection = Get-AutomationConnection -Name AzureRunAsConnection
+Connect-AzAccount -ServicePrincipal -Tenant $connection.TenantID -ApplicationId $connection.ApplicationID -CertificateThumbprint $connection.CertificateThumbprint
+
+Write-Output "Changing number of instances...";
+$resource_group = "acdnd-c4-project"
+$vmss_name = "udacity-vmss"
+$vmss = Get-AzVmss -ResourceGroupName $resource_group -VMScaleSetName $vmss_name
+$vmss.sku.capacity = 5
+Update-AzVmss -ResourceGroupName $resource_group -Name $vmss_name -VirtualMachineScaleSet $vmss
+Write-Output "Changed number of instances.";
+
+Write-Output "Listing instances...";
+Get-AzVmssVM -ResourceGroupName $resource_group -VMScaleSetName $vmss_name
+
+Write-Output "End of Runbook.";
+```
+
+![submission-screenshots/runbook/alert_details.png](submission-screenshots/runbook/alert_details.png)
+![submission-screenshots/runbook/alert_rule.png](submission-screenshots/runbook/alert_rule.png)
+![submission-screenshots/runbook/cpu_utilization.png](submission-screenshots/runbook/cpu_utilization.png)
+![submission-screenshots/runbook/creating_new_instances.png](submission-screenshots/runbook/creating_new_instances.png)
+![submission-screenshots/runbook/initial_instances.png](submission-screenshots/runbook/initial_instances.png)
+![submission-screenshots/runbook/instances_created.png](submission-screenshots/runbook/instances_created.png)
+![submission-screenshots/runbook/run_as_accounts.png](submission-screenshots/runbook/run_as_accounts.png)
+![submission-screenshots/runbook/runbook_completed.png](submission-screenshots/runbook/runbook_completed.png)
+![submission-screenshots/runbook/vm0.png](submission-screenshots/runbook/vm0.png)
+![submission-screenshots/runbook/vm2.png](submission-screenshots/runbook/vm2.png)
+
 ### Configure an Azure Alert to trigger the RunBook to execute.
 	
 Configure an Azure Alert in Azure Monitor to trigger the RunBook.
