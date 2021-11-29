@@ -295,9 +295,13 @@ As evidence, provide the following screenshots:
 
 1. Email showing the alert was triggered
 
+I received this e-mail because the alert rule `ScaleOutVMSS` was triggered for the resource `udacity-vmss`:
+
 ![submission-screenshots/runbook/alert_email.png](submission-screenshots/runbook/alert_email.png)
 
 2. Metrics or other evidence showing the RunBook executed and resolved the issue.
+
+
 
 ![submission-screenshots/runbook/initial_instances.png](submission-screenshots/runbook/initial_instances.png)
 
