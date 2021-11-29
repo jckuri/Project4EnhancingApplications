@@ -38,8 +38,6 @@ Enable Application Insights on the AKS cluster created from the provided script 
 As evidence, provide a screenshot showing Application Insights is enabled on the AKS cluster.
 
 ![submission-screenshots/kubernetes-cluster/aks_cluster_insights.png](submission-screenshots/kubernetes-cluster/aks_cluster_insights.png)
-![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
-![submission-screenshots/kubernetes-cluster/alert_rule_email.png](submission-screenshots/kubernetes-cluster/alert_rule_email.png)
 ![submission-screenshots/kubernetes-cluster/initial_instances.png](submission-screenshots/kubernetes-cluster/initial_instances.png)
 ![submission-screenshots/kubernetes-cluster/new_instances.png](submission-screenshots/kubernetes-cluster/new_instances.png)
 
@@ -48,6 +46,8 @@ As evidence, provide a screenshot showing Application Insights is enabled on the
 Create an Azure Alert in Azure Monitor. This alert should trigger when the number of pods increases beyond a certain threshold.
 
 As evidence, provide a screenshot of the Azure Alert and email sent when the alert is triggered.
+
+![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
 
 ### Create a horizontal pod auto scaler and cause load on the container.
 
@@ -60,6 +60,8 @@ As evidence, provide screenshots showing:
 2. The Application Insights metrics which show the increase in the number of pods.
 
 3. The email you received from the alert when the pod count increased.
+
+![submission-screenshots/kubernetes-cluster/alert_rule_email.png](submission-screenshots/kubernetes-cluster/alert_rule_email.png)
 
 ## Analyzing Performance Metrics
 
