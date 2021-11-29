@@ -1,0 +1,314 @@
+$ sh create-cluster.sh 
+Installing AKS CLI
+Downloading client to "/usr/local/bin/kubectl" from "https://storage.googleapis.com/kubernetes-release/release/v1.22.4/bin/linux/amd64/kubectl"
+Connection error while attempting to download client ([Errno 13] Permission denied: '/usr/local/bin/kubectl')
+AKS CLI installed
+Step 1 - Creating AKS cluster udacity-cluster
+AAD role propagation done[############################################]  100.0000%{
+  "aadProfile": null,
+  "addonProfiles": {
+    "omsagent": {
+      "config": {
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/defaultresourcegroup-wus/providers/microsoft.operationalinsights/workspaces/defaultworkspace-4ce66251-0dc2-45c1-9b68-bdb09277367e-wus"
+      },
+      "enabled": true,
+      "identity": {
+        "clientId": "24ef91f8-f499-4f20-b003-eb47e4b239b0",
+        "objectId": "b022fc67-6582-4267-9a47-9dcd7d5276c0",
+        "resourceId": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/MC_acdnd-c4-project_udacity-cluster_westus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/omsagent-udacity-cluster"
+      }
+    }
+  },
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 1,
+      "enableAutoScaling": null,
+      "enableEncryptionAtHost": false,
+      "enableFips": false,
+      "enableNodePublicIp": false,
+      "enableUltraSsd": false,
+      "gpuInstanceProfile": null,
+      "kubeletConfig": null,
+      "kubeletDiskType": "OS",
+      "linuxOsConfig": null,
+      "maxCount": null,
+      "maxPods": 110,
+      "minCount": null,
+      "mode": "System",
+      "name": "nodepool1",
+      "nodeImageVersion": "AKSUbuntu-1804gen2containerd-2021.10.30",
+      "nodeLabels": null,
+      "nodePublicIpPrefixId": null,
+      "nodeTaints": null,
+      "orchestratorVersion": "1.20.9",
+      "osDiskSizeGb": 128,
+      "osDiskType": "Managed",
+      "osSku": "Ubuntu",
+      "osType": "Linux",
+      "podSubnetId": null,
+      "powerState": {
+        "code": "Running"
+      },
+      "provisioningState": "Succeeded",
+      "proximityPlacementGroupId": null,
+      "scaleDownMode": null,
+      "scaleSetEvictionPolicy": null,
+      "scaleSetPriority": null,
+      "spotMaxPrice": null,
+      "tags": null,
+      "type": "VirtualMachineScaleSets",
+      "upgradeSettings": null,
+      "vmSize": "Standard_DS2_v2",
+      "vnetSubnetId": null
+    }
+  ],
+  "apiServerAccessProfile": null,
+  "autoScalerProfile": null,
+  "autoUpgradeProfile": null,
+  "azurePortalFqdn": "udacity-cl-acdnd-c4-project-4ce662-ff4221a3.portal.hcp.westus.azmk8s.io",
+  "disableLocalAccounts": false,
+  "diskEncryptionSetId": null,
+  "dnsPrefix": "udacity-cl-acdnd-c4-project-4ce662",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "extendedLocation": null,
+  "fqdn": "udacity-cl-acdnd-c4-project-4ce662-ff4221a3.hcp.westus.azmk8s.io",
+  "fqdnSubdomain": null,
+  "httpProxyConfig": null,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/acdnd-c4-project/providers/Microsoft.ContainerService/managedClusters/udacity-cluster",
+  "identity": {
+    "principalId": "ecdb0cfe-a79f-41aa-8be6-9d620e354892",
+    "tenantId": "b8039741-8537-4098-8882-9c337b7e7b97",
+    "type": "SystemAssigned",
+    "userAssignedIdentities": null
+  },
+  "identityProfile": {
+    "kubeletidentity": {
+      "clientId": "ef15d509-ad67-4c8f-ad40-b81f2fc59b2d",
+      "objectId": "92599a66-2a93-420f-af93-501c1e783111",
+      "resourceId": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/MC_acdnd-c4-project_udacity-cluster_westus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/udacity-cluster-agentpool"
+    }
+  },
+  "kubernetesVersion": "1.20.9",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh9NMvwH7ZdTBcCJxSFDxICPR/XhiorFjBI+6T77yqJILpUnDKB2MNN7uDlorbdkKw5hWNIxpCmBbp18D847D596N4mA5AicusXZ5NZ4pdVJd17D7j734ojLQRJ4e7AfeQfCyz3IMHnKWZ8PmuzwMDyo7Y7le+/3COGp7BgbnIgLHVoi8pEeP+/GqXdhyIrZ9vKsieUoaQLX/Z2ihO5AlMByYUcawq3Y9CV9Tb1+WYBqqHZPaVUy4rLlcveZ4ue86nZgWCXJc2JTQ++4YB5b5WjV2rFFHY6Tv+CriTViPEosLI0wTNOnlaHs067J1Muo9sd52ivsgPTk5gpAsv1sDN"
+        }
+      ]
+    }
+  },
+  "location": "westus",
+  "maxAgentPools": 100,
+  "name": "udacity-cluster",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "loadBalancerProfile": {
+      "allocatedOutboundPorts": null,
+      "effectiveOutboundIPs": [
+        {
+          "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/MC_acdnd-c4-project_udacity-cluster_westus/providers/Microsoft.Network/publicIPAddresses/77d609fb-1a32-407e-9e6c-388981334b2c",
+          "resourceGroup": "MC_acdnd-c4-project_udacity-cluster_westus"
+        }
+      ],
+      "idleTimeoutInMinutes": null,
+      "managedOutboundIPs": {
+        "count": 1
+      },
+      "outboundIPs": null,
+      "outboundIpPrefixes": null
+    },
+    "loadBalancerSku": "Standard",
+    "natGatewayProfile": null,
+    "networkMode": null,
+    "networkPlugin": "kubenet",
+    "networkPolicy": null,
+    "outboundType": "loadBalancer",
+    "podCidr": "10.244.0.0/16",
+    "serviceCidr": "10.0.0.0/16"
+  },
+  "nodeResourceGroup": "MC_acdnd-c4-project_udacity-cluster_westus",
+  "podIdentityProfile": null,
+  "powerState": {
+    "code": "Running"
+  },
+  "privateFqdn": null,
+  "privateLinkResources": null,
+  "provisioningState": "Succeeded",
+  "resourceGroup": "acdnd-c4-project",
+  "securityProfile": null,
+  "servicePrincipalProfile": {
+    "clientId": "msi",
+    "secret": null
+  },
+  "sku": {
+    "name": "Basic",
+    "tier": "Free"
+  },
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters",
+  "windowsProfile": null
+}
+{
+  "aadProfile": null,
+  "addonProfiles": {
+    "omsagent": {
+      "config": {
+        "logAnalyticsWorkspaceResourceID": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/defaultresourcegroup-wus/providers/microsoft.operationalinsights/workspaces/defaultworkspace-4ce66251-0dc2-45c1-9b68-bdb09277367e-wus"
+      },
+      "enabled": true,
+      "identity": {
+        "clientId": "24ef91f8-f499-4f20-b003-eb47e4b239b0",
+        "objectId": "b022fc67-6582-4267-9a47-9dcd7d5276c0",
+        "resourceId": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/MC_acdnd-c4-project_udacity-cluster_westus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/omsagent-udacity-cluster"
+      }
+    }
+  },
+  "agentPoolProfiles": [
+    {
+      "availabilityZones": null,
+      "count": 1,
+      "enableAutoScaling": null,
+      "enableEncryptionAtHost": false,
+      "enableFips": false,
+      "enableNodePublicIp": false,
+      "enableUltraSsd": false,
+      "gpuInstanceProfile": null,
+      "kubeletConfig": null,
+      "kubeletDiskType": "OS",
+      "linuxOsConfig": null,
+      "maxCount": null,
+      "maxPods": 110,
+      "minCount": null,
+      "mode": "System",
+      "name": "nodepool1",
+      "nodeImageVersion": "AKSUbuntu-1804gen2containerd-2021.10.30",
+      "nodeLabels": null,
+      "nodePublicIpPrefixId": null,
+      "nodeTaints": null,
+      "orchestratorVersion": "1.20.9",
+      "osDiskSizeGb": 128,
+      "osDiskType": "Managed",
+      "osSku": "Ubuntu",
+      "osType": "Linux",
+      "podSubnetId": null,
+      "powerState": {
+        "code": "Running"
+      },
+      "provisioningState": "Succeeded",
+      "proximityPlacementGroupId": null,
+      "scaleDownMode": null,
+      "scaleSetEvictionPolicy": null,
+      "scaleSetPriority": null,
+      "spotMaxPrice": null,
+      "tags": null,
+      "type": "VirtualMachineScaleSets",
+      "upgradeSettings": null,
+      "vmSize": "Standard_DS2_v2",
+      "vnetSubnetId": null
+    }
+  ],
+  "apiServerAccessProfile": null,
+  "autoScalerProfile": null,
+  "autoUpgradeProfile": null,
+  "azurePortalFqdn": "udacity-cl-acdnd-c4-project-4ce662-ff4221a3.portal.hcp.westus.azmk8s.io",
+  "disableLocalAccounts": false,
+  "diskEncryptionSetId": null,
+  "dnsPrefix": "udacity-cl-acdnd-c4-project-4ce662",
+  "enablePodSecurityPolicy": null,
+  "enableRbac": true,
+  "extendedLocation": null,
+  "fqdn": "udacity-cl-acdnd-c4-project-4ce662-ff4221a3.hcp.westus.azmk8s.io",
+  "fqdnSubdomain": null,
+  "httpProxyConfig": null,
+  "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/acdnd-c4-project/providers/Microsoft.ContainerService/managedClusters/udacity-cluster",
+  "identity": {
+    "principalId": "ecdb0cfe-a79f-41aa-8be6-9d620e354892",
+    "tenantId": "b8039741-8537-4098-8882-9c337b7e7b97",
+    "type": "SystemAssigned",
+    "userAssignedIdentities": null
+  },
+  "identityProfile": {
+    "kubeletidentity": {
+      "clientId": "ef15d509-ad67-4c8f-ad40-b81f2fc59b2d",
+      "objectId": "92599a66-2a93-420f-af93-501c1e783111",
+      "resourceId": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourcegroups/MC_acdnd-c4-project_udacity-cluster_westus/providers/Microsoft.ManagedIdentity/userAssignedIdentities/udacity-cluster-agentpool"
+    }
+  },
+  "kubernetesVersion": "1.20.9",
+  "linuxProfile": {
+    "adminUsername": "azureuser",
+    "ssh": {
+      "publicKeys": [
+        {
+          "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh9NMvwH7ZdTBcCJxSFDxICPR/XhiorFjBI+6T77yqJILpUnDKB2MNN7uDlorbdkKw5hWNIxpCmBbp18D847D596N4mA5AicusXZ5NZ4pdVJd17D7j734ojLQRJ4e7AfeQfCyz3IMHnKWZ8PmuzwMDyo7Y7le+/3COGp7BgbnIgLHVoi8pEeP+/GqXdhyIrZ9vKsieUoaQLX/Z2ihO5AlMByYUcawq3Y9CV9Tb1+WYBqqHZPaVUy4rLlcveZ4ue86nZgWCXJc2JTQ++4YB5b5WjV2rFFHY6Tv+CriTViPEosLI0wTNOnlaHs067J1Muo9sd52ivsgPTk5gpAsv1sDN"
+        }
+      ]
+    }
+  },
+  "location": "westus",
+  "maxAgentPools": 100,
+  "name": "udacity-cluster",
+  "networkProfile": {
+    "dnsServiceIp": "10.0.0.10",
+    "dockerBridgeCidr": "172.17.0.1/16",
+    "loadBalancerProfile": {
+      "allocatedOutboundPorts": null,
+      "effectiveOutboundIPs": [
+        {
+          "id": "/subscriptions/4ce66251-0dc2-45c1-9b68-bdb09277367e/resourceGroups/MC_acdnd-c4-project_udacity-cluster_westus/providers/Microsoft.Network/publicIPAddresses/77d609fb-1a32-407e-9e6c-388981334b2c",
+          "resourceGroup": "MC_acdnd-c4-project_udacity-cluster_westus"
+        }
+      ],
+      "idleTimeoutInMinutes": null,
+      "managedOutboundIPs": {
+        "count": 1
+      },
+      "outboundIPs": null,
+      "outboundIpPrefixes": null
+    },
+    "loadBalancerSku": "Standard",
+    "natGatewayProfile": null,
+    "networkMode": null,
+    "networkPlugin": "kubenet",
+    "networkPolicy": null,
+    "outboundType": "loadBalancer",
+    "podCidr": "10.244.0.0/16",
+    "serviceCidr": "10.0.0.0/16"
+  },
+  "nodeResourceGroup": "MC_acdnd-c4-project_udacity-cluster_westus",
+  "podIdentityProfile": null,
+  "powerState": {
+    "code": "Running"
+  },
+  "privateFqdn": null,
+  "privateLinkResources": null,
+  "provisioningState": "Succeeded",
+  "resourceGroup": "acdnd-c4-project",
+  "securityProfile": null,
+  "servicePrincipalProfile": {
+    "clientId": "msi",
+    "secret": null
+  },
+  "sku": {
+    "name": "Basic",
+    "tier": "Free"
+  },
+  "tags": null,
+  "type": "Microsoft.ContainerService/ManagedClusters",
+  "windowsProfile": null
+}
+The monitoring addon is already enabled for this managed cluster.
+To change monitoring configuration, run "az aks disable-addons -a monitoring"before enabling it again.
+AKS cluster created: udacity-cluster
+Step 2 - Getting AKS credentials
+Merged "udacity-cluster" as current context in /home/jckuri/.kube/config
+Command ran in 1.664 seconds (init: 0.140, invoke: 1.524)
+Verifying connection to udacity-cluster
+NAME                                STATUS   ROLES   AGE   VERSION
+aks-nodepool1-36042257-vmss000000   Ready    agent   96s   v1.20.9
+
