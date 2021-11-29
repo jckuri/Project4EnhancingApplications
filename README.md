@@ -55,7 +55,8 @@ Create an Azure Alert in Azure Monitor. This alert should trigger when the numbe
 
 As evidence, provide a screenshot of the Azure Alert and email sent when the alert is triggered.
 
-The details of the alert rule with the moments in which the rule was activated:
+My alert rule activates whenever the average number of active pods is greater than `14.5`.
+Here are the moments in which the alert rule was activated:
 
 ![submission-screenshots/kubernetes-cluster/alert_rule_details.png](submission-screenshots/kubernetes-cluster/alert_rule_details.png)
 
